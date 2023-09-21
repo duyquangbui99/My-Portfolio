@@ -1,0 +1,132 @@
+/*-- navbar--*/
+.header {
+    display: flex;
+    justify-content: space-between; /* This will push the logo to the right and the nav links to the left */
+    align-items: center; /* Vertically center the items */
+    padding: 10px 20px; /* Add padding for spacing */
+}
+
+.navbar {
+    display: flex; /* Make the navigation links flex items */
+}
+
+.header a {
+    margin-right: 20px; /* Add margin between the navigation links for spacing */
+    text-decoration: none;
+    color: #333; /* Set the color of the links */
+    font-weight: 550;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.my_name{
+    font-size: 20px;
+}
+/*-- navbar--*/
+
+
+
+/*-- body --*/
+.icon {
+    display: flex;
+    align-items: center; /* Center the logos vertically */
+}
+.body{
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+    margin: auto;
+    padding-top: 10%;
+}
+.text{
+    width: 55%;
+}
+
+/*--animation--*/
+.box{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0,0,0);
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.box::before{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height:140%;
+    background-color: white;
+    box-shadow: 0 0 20px rgb(8,8,8) ;
+    animation: animate 4s linear infinite;
+    border: 2px solid red;
+}
+
+.box::after{
+    content: '';
+    position: absolute;
+    inset: 10px;
+    border-radius: 16px;
+}
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+/*--animation--*/
+
+.profile_pic{
+    width: 275px;
+    height: 325px;
+    margin: 0;
+    border-radius: 20px;
+    position: absolute;
+    
+}
+
+
+.logo {
+    width: 25px; /* Adjust the width to make the logos smaller */
+    height: 25px; /* Adjust the height to make the logos smaller */
+    margin-right: 20px; /* Add margin between the logos for spacing */
+    vertical-align: middle;
+
+}
+
+h1 , p{
+    font-weight: 550;
+    font-family: "Gill Sans", sans-serif;
+    
+}
+h1{
+    color: #333; 
+    font-size: 50px;
+    margin: 0;
+}
+p{
+    color:grey;
+    font-size: 15px;
+}
+
+.tech-stack p {
+    margin-right: 10px; /* Add some spacing between the text and images */
+    display: inline; /* Make the <p> element inline */
+    vertical-align: middle; /* Align the <p> element vertically in the middle */
+    color: #333; 
+}
+
+.tech-stack {
+    padding-top: 20px;
+    display: inline-block; /* Ensure the elements are inline */
+    vertical-align: middle; /* Align elements vertically in the middle */
+}
+
+
+/*-- body--*/
