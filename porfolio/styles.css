@@ -1,10 +1,18 @@
 
 /*-- navbar--*/
+html, body {
+    scroll-behavior: smooth;
+}
 .header {
     display: flex;
     justify-content: space-between; /* This will push the logo to the right and the nav links to the left */
     align-items: center; /* Vertically center the items */
     padding: 10px 20px; /* Add padding for spacing */
+    position: sticky;
+    top: 0; /* top of viewport */
+    z-index: 100; /* always on other stack */
+    background-color: rgba(255, 255, 255, 0.001); /* Adjust the alpha (last value) for transparency */
+  
 }
 
 .navbar {
@@ -27,11 +35,14 @@
 
 
 /*-- body --*/
+/*-- Home section --*/
 body{
     background-image: radial-gradient(circle at center,rgb(250, 250, 250) 40% ,rgb(146, 139, 139)); /* Adjust colors as needed */
     background-size: 100%; /* Adjust background size as needed */
     background-repeat: no-repeat; /* Prevent background image from repeating */
     background-attachment: fixed; /* Fix the background image to the viewport */
+    padding: 0;
+    margin: 0;
 
 }
 .home{
@@ -87,7 +98,7 @@ body{
         transform: rotate(180deg);
     }
 }
-/*--animation--*/
+/*--end of animation--*/
 
 .profile_pic{
     width: 275px;
@@ -95,9 +106,7 @@ body{
     margin: 0;
     border-radius: 20px;
     position: absolute;
-    
 }
-
 
 .logo {
     width: 25px; /* Adjust the width to make the logos smaller */
@@ -105,8 +114,6 @@ body{
     margin-right: 15px; /* Add margin between the logos for spacing */
     margin-left: 15px;
     vertical-align: middle;
-
-
 }
 
 .icon a{
@@ -115,18 +122,23 @@ body{
 
 h1 , p{
     font-weight: 550;
-    font-family: "Gill Sans", sans-serif;
-    
+    font-family: "Gill Sans", sans-serif;   
 }
-h1{
+.text h1{
     color: #333; 
     font-size: 50px;
     margin: 0;
     font-weight: 700;
 }
-p{
+/*
+.text p, .scroll-down p{
     color:grey;
     font-size: 15px;
+}*/
+
+p{
+    color:grey;
+    font-size: 18px;
 }
 
 .tech-stack p {
@@ -138,6 +150,7 @@ p{
 
 .tech-stack {
     padding-top: 20px;
+    padding-bottom: 10px;
     display: inline-block; /* Ensure the elements are inline */
     vertical-align: middle; /* Align elements vertically in the middle */
 }
@@ -146,6 +159,10 @@ p{
     flex-basis: 100%; /* Make .scroll-down take up 100% of the width */
     text-align: center; 
 }
+.scroll-down .logo{
+    width: 30px;
+    height: 30px;
+}
 
 .content {
     flex: 1; /* Allow content to grow and take available space */
@@ -153,14 +170,155 @@ p{
     /* Add any other styles for the content here */
 }
 
-
 @media (max-width: 768px) {
     .home {
         /* Adjust the width for smaller screens */
-        width: 100%; /* 100% width for full responsiveness */
+        width: 90%; /* 100% width for full responsiveness */
+        height:100vh;
         flex-wrap: wrap;
     }
+
+    .text{
+        width: 100%;
+    }
+    .text h1{
+        font-size: 35px;
+        margin: 0;
+        font-weight: 700;
+    }
+    p{
+        font-size: 13px;
+    }
 }
+/*--End of Home--*/
+
+/*--------------------------------*/
+/*-- About Section--*/
+.about{
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+}
+
+.intro-sec ,.about-content, .edu-boxes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width:70%;
+}
+
+.intro-sec h1{
+    font-weight: 650;
+    font-size: 45px;
+}
+
+.intro-sec{
+    padding-top: 5%;
+}
+
+.line{
+    height: 3px;
+    width: 70%;
+    background: linear-gradient(to right, #6DC7FF, #E6ABFF)
+}
+
+.avatar{
+    height: 25%;
+    width: 25%;
+}
+
+.intro-content{
+    width: 60%;
+}
+
+.hire-button, .forfree-button {
+    display: inline-block;
+    padding: 2% 4%;
+    background-color: #2f8aec; /* Button background color */
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove underlines from the link */
+    border-radius: 20px; /* Rounded corners */
+    font-weight: bold;
+    font-size: 16px; /* Adjust font size as needed */
+}
+.forfree-button{
+    background: linear-gradient(to bottom right, #6DC7FF, #E6ABFF);
+    color: #0056b3;
+}
+
+.hire-button:hover {
+    background-color: #0056b3; /* Change color on hover */
+}
+
+
+.edu-boxes{
+    padding-top: 10px;
+}
+
+.outer-box{
+    display: flex;
+    height: 300px;
+    border-radius: 20px;
+    width: 45%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    justify-content: space-evenly;
+}
+.edu-design{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.edu-design .logo{
+    width: 90%; /* Adjust the width to make the logos smaller */
+    height: 15%; /* Adjust the height to make the logos smaller */
+    padding-top: 10px;
+    margin: 0;
+
+}
+.edu-text{
+    width: 80%;
+    height: 100%;
+}
+.black{
+    color: black;
+    font-size: 19px;
+}
+.edu-line{
+    width: 3px;
+    height: 75%;
+    background-color: #F43333;
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .intro-sec, .about-content, .edu-boxes{
+        width: 95%;
+    }
+
+    .p, .hire-button, .forfree-button{
+        font-size: 13px;
+    }
+    .black{
+        font-size: 18px;
+    }
+    .line{
+        width: 60%;
+    }
+    .intro-sec h1{
+        font-size: 25px;
+    }
+}
+
+
+
+
+/*-- End of About--*/
+/*--------------------------------*/
+
 
 
 /*-- body--*/
