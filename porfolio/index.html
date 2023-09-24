@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Porfolio</title>
-
-
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -48,14 +46,16 @@
                 <img class="logo" src="images/bootstrap.png" alt="Bootstrap" />
             </div>
         </div>
-        <div class="profile-pic">
+        <div class="profile-div">
             <div class="box">
                 <img class="profile_pic" src="images/profile-pic.png" alt="ProfilePic" />
             </div>
         </div>
         <div class="scroll-down">
             <p>Scroll Down</p>
-            <img class="logo" src="images/scrolldown.png" alt="Scrolldown" />
+            <a href="#about">
+                <img class="logo" src="images/scrolldown.png" alt="Scrolldown" />
+            </a>
         </div>
     </section>
     <!-- home -->
@@ -72,7 +72,7 @@
             <div class="intro-content"> <p>As a computer science graduate, I am eager to leverage my programming knowledge and creative skills in front-end or software developer role. I possess a strong proficiency in several programming languages. I am confident in my ability to make valuable contributions to the company.</p>
                 <div>
                     <a href="#contact" class="hire-button">Hire Me</a>
-                    <a href="#contact" class="forfree-button">I can work for FREE!</a> 
+                    <a href="#contact" class="forfree-button">Download CV</a> 
                 </div>  
             </div>
         </div>
@@ -81,6 +81,7 @@
             <h1>Education</h1>
             <div class="line"></div>
         </div>
+        <!--education-->
         <div class="edu-boxes">
             <div class="outer-box">
                 <div class="edu-design">
@@ -110,9 +111,50 @@
                     <p>GPA: 3.76</p>
                     <p>Relevant Coursework: Python, BDMS</p>
                 </div>
-        
             </div>
         </div>
+        <!--end of education-->
+
+        <div class="intro-sec" id="project">
+            <h1>Projects</h1>
+            <div class="line"></div>
+        </div>
+
+        <!--projects-->
+        <div class="project">
+            <div class="project-content">
+                <div class="project-text">
+                    <h2 class="bold">Sudoku Game Solver</h2>
+                    <p>The game starts with a partially filled grid, and your goal is to fill in the remaining squares.</p>
+                    <p>This is a Python program that allows you to play and solve Sudoku puzzles.
+                         It uses the Tkinter library to create a graphical user interface (GUI) for the game.</p>
+                    <div class="github-repo">
+                        <p>GitHub Repo |</p>
+                        <a href="https://github.com/duyquangbui99/SudokuSovlerPython" target="_blank">
+                            <img class="logo" src="images/github-mark.png" alt="Github"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="image-div">
+                    <img class="project-image" src="images/sudoku.gif" alt="Sudoku" />
+                    <div class="image-shade">
+                        <img class="inner-shade" src="images/background.png" alt="InnerShade"/>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--end of projects-->
+
+        <div class="contact" id="contact">
+            <div class="intro-sec">
+                <h1>Contact</h1>
+                <div class="line"></div>
+            </div>
+        </div>
+        
+
+
     </div>
     <!-- about -->
 </body>
