@@ -69,7 +69,9 @@
         
         <div class="about-content">
             <img class="avatar" src="images/man.png" alt="Avatar">
-            <div class="intro-content"> <p>As a computer science graduate, I am eager to leverage my programming knowledge and creative skills in front-end or software developer role. I possess a strong proficiency in several programming languages. I am confident in my ability to make valuable contributions to the company.</p>
+            <div class="intro-content"> <p>As a computer science graduate, I am eager to leverage my programming knowledge and creative skills in front-end or software developer role. 
+                I possess a strong proficiency in several programming languages such as JS, Python, and C#. 
+                I am confident in my ability to make valuable contributions to the company.</p>
                 <div>
                     <a href="#contact" class="hire-button">Hire Me</a>
                     <a href="#contact" class="forfree-button">Download CV</a> 
@@ -109,25 +111,24 @@
                     <p class="black">Computer Information Systems, A.S.</p>
                     <p>Tulsa, OK</p>
                     <p>GPA: 3.76</p>
-                    <p>Relevant Coursework: Python, BDMS</p>
+                    <p>Relevant Coursework: Python, DBMS</p>
                 </div>
             </div>
         </div>
         <!--end of education-->
 
-        <div class="intro-sec" id="project">
-            <h1>Projects</h1>
-            <div class="line"></div>
-        </div>
-
         <!--projects-->
-        <div class="project">
+        <div class="project" id="project">
+            <div class="intro-sec">
+                <h1>Project</h1>
+                <div class="line"></div>
+            </div>
             <div class="project-content">
                 <div class="project-text">
                     <h2 class="bold">Sudoku Game Solver</h2>
-                    <p>The game starts with a partially filled grid, and your goal is to fill in the remaining squares.</p>
                     <p>This is a Python program that allows you to play and solve Sudoku puzzles.
                          It uses the Tkinter library to create a graphical user interface (GUI) for the game.</p>
+                    <p>The game starts with a partially filled grid, and your goal is to fill in the remaining squares.</p>
                     <div class="github-repo">
                         <p>GitHub Repo |</p>
                         <a href="https://github.com/duyquangbui99/SudokuSovlerPython" target="_blank">
@@ -140,21 +141,40 @@
                     <div class="image-shade">
                         <img class="inner-shade" src="images/background.png" alt="InnerShade"/>
                     </div>
-
                 </div>
             </div>
         </div>
         <!--end of projects-->
 
+        <!--contact me-->
         <div class="contact" id="contact">
             <div class="intro-sec">
-                <h1>Contact</h1>
-                <div class="line"></div>
+                <h1>Let's Collaborate</h1>
+                <p>Reach me via: qbuiforwork@gmail.com</p>
+                <p>or phone number: (918) 896-5158</p>
+            </div>
+            <div class="contact-content">
+                <div class="letschat">
+                    <img class="handshake-img" src="images/handshake.png" alt="Handshake"/>
+    
+                </div>
+                <div class="submit-form">
+                    <h2>Say Hello!</h2>
+                    <form action="submit_form.php" method="post">
+                        <input class="client-info" type="text" id="first-name" name="first-name" placeholder="Firt Name" required><br><br>
+
+                        <input class="client-info" type="text" id="last-name" name="last-name" placeholder="Last Name" required><br><br>
+
+                        <input class="client-info" type="email" id="email" name="email" placeholder="What's your email?" required><br><br>
+
+                        <textarea class="client-message" id="message" name="message" rows="4" cols="50" placeholder="Message me!" required></textarea><br><br>
+
+                        <input class="submit-btn" type="submit" value="Submit">
+                    </form>
+                </div>
             </div>
         </div>
-        
-
-
+        <!--end of contact-->
     </div>
     <!-- about -->
 </body>
