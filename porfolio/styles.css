@@ -130,7 +130,7 @@ body{
     vertical-align: middle;
 }
 
-.icon a{
+.icon a, .social-icon a{
     text-decoration: none;
 }
 
@@ -241,8 +241,7 @@ p{
     width: 60%;
 }
 
-.hire-button, .forfree-button {
-    display: inline-block;
+.hire-button {
     padding: 2% 4%;
     background-color: #2f8aec; /* Button background color */
     color: #fff; /* Text color */
@@ -251,10 +250,7 @@ p{
     font-weight: bold;
     font-size: 16px; /* Adjust font size as needed */
 }
-.forfree-button{
-    background: linear-gradient(to bottom right, #6DC7FF, #E6ABFF);
-    color: #0056b3;
-}
+
 
 .hire-button:hover {
     background-color: #0056b3; /* Change color on hover */
@@ -302,6 +298,9 @@ p{
     background: linear-gradient(to bottom, #6DC7FF, #E6ABFF);
     margin: 0;
 }
+.for-free{
+    padding-bottom: 3%;
+}
 
 
 @media (max-width: 768px) {
@@ -309,7 +308,7 @@ p{
         width: 95%;
     }
 
-    .p, .hire-button, .forfree-button, .black{
+    .p, .hire-button, .black{
         font-size: 13px;
     }
     .line{
@@ -323,6 +322,12 @@ p{
     }
     .outer-box{
         height: 270px;
+    }
+    .hire-button, .for-free{
+        display: inline;
+    }
+    .for-free{
+        padding-right: 5%;
     }
 }
 /*-- End of Edu Section--*/
@@ -386,6 +391,10 @@ p{
     .project-text, .image-div{
         height: 300px;
     }
+    .image-div{
+        height: 250px;
+        width: 50%;
+    }
 }
 /*-- End of Project-*/
 
@@ -412,40 +421,45 @@ p{
 .contact-content{
     height: calc(100vh - 260px);
     width: 90%;
+    box-sizing: border-box;
 }
 .handshake-img{
     width: 80%;
     height: 70%;
 }
-.letschat, .submit-form{
+.letschat {
     width: 50%;
     height: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-}
-.letschat{
     justify-content: center;
+    align-items: center;
+}
+.submit-form{
+    width: 50%;
+    height: 100%;
+    text-align: center;
 }
 
+
 .client-info, .client-message, .submit-btn{
-    width: 100%;
+    width: 80%;
     border-radius: 30px;
     border: 1px solid lightgray;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
 }
 .client-info{
-    height: 20%;
+    height: 4em;
 }
 
 .client-message{
-    height: 50%;
+    height: 8em;
 }
 .submit-btn{
-    width: 100%;
-    height: 20%;
+    width: 80%;
+    height: 2.5em;
     color: white;
     font-size: 23px;
     background: linear-gradient(to bottom right, #6DC7FF, #E6ABFF);
@@ -478,20 +492,62 @@ input[type="text"], input[type="email"] {
     box-sizing: border-box; /* Include padding and border in the total width */
 }
 
+.intro-sec a{
+    text-decoration: none;
+    font-weight: 550;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 18px;
+}
+.bold-grey{
+    color:rgb(94, 92, 92);
+}
+.client-info:hover, .client-message:hover {
+    background-color: rgb(245, 245, 245);
+    border: grey 0.5px solid;
+}
+.submit-btn:hover{
+    background: linear-gradient(to bottom right, #339bdc, #b03ce2);
+}
+
 @media (max-width: 768px) {
     .contact{
-        height: 130%;
+        padding-bottom: 10%;
     }
     .contact-content{
         flex-direction: column; 
-        height: 100%;
     }
     .letschat, .submit-form{
         width: 100% ;
     }
+    .letschat{
+        justify-content: unset;
+        height: 30%;
+        box-sizing: border-box;
+    }
+    .handshake-img{
+        width: 60%;
+        height:100%
+    }
+    .client-info, .client-message, .submit-btn{
+        width: 90%;
+        display: block;
+        margin: 20px auto;
+        height: 2.5em;
+    }
+    .client-message{
+        height: 7em;
+    }
+    .submit-btn{
+        height: 2em;
+    }
+    .submit-btn{
+        width: 40%;
+    }
+    .intro-sec{
+        padding-top: 7%;
+        padding-bottom: 7%;
+    }
 }
-
 /*-- End of Contact-*/
-
 
 /*-- body--*/
