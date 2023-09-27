@@ -130,7 +130,11 @@ body{
     vertical-align: middle;
 }
 
-.icon a, .social-icon a{
+.bigger{
+    width: 35px; /* Adjust the width to make the logos smaller */
+    height: 35px;
+}
+.icon a{
     text-decoration: none;
 }
 
@@ -323,12 +327,7 @@ p{
     .outer-box{
         height: 270px;
     }
-    .hire-button, .for-free{
-        display: inline;
-    }
-    .for-free{
-        padding-right: 5%;
-    }
+
 }
 /*-- End of Edu Section--*/
 /*-- End of About--*/
@@ -400,8 +399,8 @@ p{
 
 /*-- Contact-*/
 .contact{
-    background-color: rgb(250, 250, 250);
-    /*background-image: url('images/contact-bg.png'); */
+    
+    background-image: url('images/contact-bg2.png'); 
     width: 100%;
     height: 100vh;
     background-size: cover; 
@@ -510,9 +509,7 @@ input[type="text"], input[type="email"] {
 }
 
 @media (max-width: 768px) {
-    .contact{
-        padding-bottom: 10%;
-    }
+
     .contact-content{
         flex-direction: column; 
     }
@@ -549,5 +546,50 @@ input[type="text"], input[type="email"] {
     }
 }
 /*-- End of Contact-*/
+
+/*--Thank you page-*/
+.thankyou-page{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+}
+.thanks-img{
+    width: 400px;
+    height: 350px;
+}
+.p-div{
+    padding-bottom: 2%;
+}
+
+
+.home-button {
+    padding: 1% 1%;
+    background-color: white; /* Button background color */
+    text-decoration: none; /* Remove underlines from the link */
+    border-radius: 20px; /* Rounded corners */
+    border: 1.5px solid black;
+}
+
+@media (max-width: 768px) {
+    .thankyou-page h1{
+        font-size: 25px;
+    }
+    .thanks-img{
+        padding-top: 10%;
+        width: 300px;
+        height: 250px;
+        top: 3;
+    }
+    .thankyou-page{
+        justify-content: unset;
+    }
+}
+
+/*--End of Thank you page-*/
+
 
 /*-- body--*/
