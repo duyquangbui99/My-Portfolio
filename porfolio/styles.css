@@ -171,7 +171,8 @@ p{
 .scroll-down{
     flex-basis: 100%; /* Make .scroll-down take up 100% of the width */
     text-align: center; 
-    box-sizing: border-box;
+    justify-content: center;
+    height: 100px;
 }
 .scroll-down .logo{
     width: 30px;
@@ -180,10 +181,12 @@ p{
 
 
 @media (max-width: 768px) {
+    body{
+        background-image: radial-gradient(circle at center,rgb(255, 255, 255) 40% ,rgb(250, 250, 250));
+    }
     .home {
-        /* Adjust the width for smaller screens */
         width: 90%; /* 100% width for full responsiveness */
-        height:100vh;
+        height: cal(100vh - 60px);
     }
     .text{
         width: 95%;
@@ -327,6 +330,9 @@ p{
     .outer-box{
         height: 270px;
     }
+    .intro-sec{
+        padding-top: 5%;
+    }
 
 }
 /*-- End of Edu Section--*/
@@ -414,11 +420,10 @@ p{
     align-items: center;
     box-sizing: border-box;
     height: 150px;
-    line-height: 0.5;
+
 }
 
 .contact-content{
-    height: calc(100vh - 260px);
     width: 90%;
     box-sizing: border-box;
 }
@@ -522,6 +527,7 @@ input[type="text"], input[type="email"] {
         box-sizing: border-box;
     }
     .handshake-img{
+        padding-top: 5%;
         width: 60%;
         height:100%
     }
@@ -540,9 +546,8 @@ input[type="text"], input[type="email"] {
     .submit-btn{
         width: 40%;
     }
-    .intro-sec{
-        padding-top: 7%;
-        padding-bottom: 7%;
+    .contact .intro-sec{
+        padding-top: 15%;
     }
 }
 /*-- End of Contact-*/
@@ -573,6 +578,10 @@ input[type="text"], input[type="email"] {
     border-radius: 20px; /* Rounded corners */
     border: 1.5px solid black;
 }
+.home-button:hover{
+    background-color: rgb(245, 245, 245);
+
+}
 
 @media (max-width: 768px) {
     .thankyou-page h1{
@@ -586,6 +595,10 @@ input[type="text"], input[type="email"] {
     }
     .thankyou-page{
         justify-content: unset;
+    }
+    .bigger{
+        width: 28px; /* Adjust the width to make the logos smaller */
+        height: 28px;
     }
 }
 
