@@ -19,6 +19,24 @@ function toggleNavbarShadow() {
     lastScrollPosition = currentScrollPosition;
 }
 
+// animation, show sections
+const observer = new IntersectionObserver((entries) =>{
+    entries.forEach((entry) => {
+        console.log(entry)
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }else{
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+
+
+
+
 // Add an event listener to the window for scroll events
 window.addEventListener('scroll', toggleNavbarShadow);
 
