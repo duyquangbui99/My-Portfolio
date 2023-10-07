@@ -34,9 +34,6 @@ const observer = new IntersectionObserver((entries) =>{
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
-
-
-
 // Add an event listener to the window for scroll events
 window.addEventListener('scroll', toggleNavbarShadow);
 
